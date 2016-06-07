@@ -1,0 +1,5 @@
+[client]
+database = stockrepo
+user = homestead
+password = secret
+default-char-set = utf8
