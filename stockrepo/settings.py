@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'storages',
     'lumose.apps.LumoseConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -122,3 +123,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+# django_storages variables
+
+AWS_ACCESS_KEY_ID = 'AKIAJQPGKB4CEHQZT77A'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'lumose'
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'

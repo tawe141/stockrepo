@@ -1,3 +1,4 @@
 /.idea
 mysql.cnf
 /venv
+/stockrepo/settings.py
