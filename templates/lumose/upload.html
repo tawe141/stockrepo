@@ -4,7 +4,7 @@
 
 <form action="upload" method="post" enctype="multipart/form-data">
     {% csrf_token %}
-    <input type="file" name="picture_upload" />
+    {{ form }}
     <input type="submit" />
 </form>
 

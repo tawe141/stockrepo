@@ -3,3 +3,5 @@ mysql.cnf
 /venv
 /stockrepo/settings.py
 mysqlclient-1.3.7-cp35-cp35m-win_amd64.whl
+*.pyc
+*.pyo

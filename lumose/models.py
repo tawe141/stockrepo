@@ -1,4 +1,5 @@
 from django.db import models
+from django.forms import ModelForm
 import storages.backends.s3boto
 
 
@@ -14,6 +15,7 @@ protected_storage = storages.backends.s3boto.S3BotoStorage(
 class Tag(models.Model):
     name = models.CharField(max_length=40)
     description = models.CharField(max_length=200)
+    count = models.PositiveIntegerField(default=0)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
@@ -36,3 +38,13 @@ class Photo(models.Model):
         return self.title
 
 
+class PhotoForm(ModelForm):
+    class Meta:
+        model = Photo
+        fields = ['title', 'description', 'file']
+
+
+class TagForm(ModelForm):
+    class Meta:
+        model = Tag
+        fields = ['name', 'description']
